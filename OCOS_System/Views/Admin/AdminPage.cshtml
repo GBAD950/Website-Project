@@ -1,0 +1,15 @@
+﻿@model OCOS_System.ViewModels.AdminViewModel
+@{
+    ViewData["Title"] = "UserPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{<h3>Welcome  @UserManager.GetUserName(User)!</h3>
+<br />
+<h4>add two buttons one for update availability and another to request off</h4>
+
+}
+
